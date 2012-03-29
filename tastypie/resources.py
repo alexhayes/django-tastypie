@@ -2079,6 +2079,9 @@ class ModelResource(Resource):
                 # FIXME: Dupe the original bundle, copy in the new object &
                 #        check the perms on that (usin the related resource)?
                 related_resource = field_object.get_related_resource(bundle.obj)
+
+                #Note:   Removing this line. Seems to be a conflict with the related_bundle in the 
+                #        for-loop causing each item to be the parent??
                 #related_bundle = related_resource.build_bundle(obj=bundle.obj, request=bundle.request)
 
                 # FIXME: To avoid excessive saves, we may need to pass along a
