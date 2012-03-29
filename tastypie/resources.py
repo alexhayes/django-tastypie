@@ -2079,7 +2079,7 @@ class ModelResource(Resource):
                 # FIXME: Dupe the original bundle, copy in the new object &
                 #        check the perms on that (usin the related resource)?
                 related_resource = field_object.get_related_resource(bundle.obj)
-                related_bundle = related_resource.build_bundle(obj=bundle.obj, request=bundle.request)
+                #related_bundle = related_resource.build_bundle(obj=bundle.obj, request=bundle.request)
 
                 # FIXME: To avoid excessive saves, we may need to pass along a
                 #        set of objects/pks seens so as not to resave.
