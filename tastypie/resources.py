@@ -1969,6 +1969,9 @@ class ModelResource(Resource):
         for field_name, field_object in self.fields.items():
             if not getattr(field_object, 'is_related', False):
                 continue
+            
+            if getattr(field_object, 'readonly', True):
+                continue
 
             if getattr(field_object, 'is_m2m', False):
                 continue
